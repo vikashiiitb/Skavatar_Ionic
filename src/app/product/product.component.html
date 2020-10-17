@@ -1,0 +1,96 @@
+  
+
+<ion-row>
+  <ion-col>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let i of product.image;">
+        <img class="image" [src]="i">
+        <div class="product-image-overlay"></div>
+      </ion-slide>
+    </ion-slides>
+    <ion-badge class="badge ion-float-right">
+      <ion-icon name="images"></ion-icon>
+      {{product.image.length}}
+    </ion-badge>
+  </ion-col>
+</ion-row>
+<div padding>
+  <ion-row class="ion-padding-start">
+    <ion-text>
+      {{product.currency}}{{product.cost_price}}
+    </ion-text>
+  </ion-row>
+  <ion-row lines="none" class="row" class="ion-padding-start">
+    <ion-text class="name">{{product.name}}</ion-text>
+  </ion-row>
+  <ion-row lines="none" class="ion-padding-start">
+    <ion-text class="font-medium">
+      {{product.specs}}
+    </ion-text>
+  </ion-row>
+  <ion-row lines="none" class="ion-padding-start">
+    <ion-text class="font-small">
+     This product is demo product. This is not for sale {{product.description}}
+    </ion-text>
+  </ion-row>
+  <p class="ion-padding-start ion-padding-top">
+    <ion-row>
+      <ion-col class="ion-text-start">
+        <div class="font-small">
+          <fa-icon icon="map-marker-alt"></fa-icon> Babusapalya
+        </div>
+      </ion-col>
+      <ion-col class="ion-text-right">
+        <div class="font-small">
+          24th-July
+        </div>
+      </ion-col>
+    </ion-row>
+  </p>
+  <div class="sep"></div>
+  <ion-list>
+    <ion-list-header>
+      Details
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>
+        <h2>Type</h2>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>For sale</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Listed by</h2>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>Owner</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Size</h2>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>Senior</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Seller Profile
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="product.image[0]">
+      </ion-avatar>
+      <ion-label>
+        <ion-text><span float-left no-margin><strong>Sold By</strong></span></ion-text><br>
+        <h2>{{product.sold_by}}</h2>
+        <h3>{{product.store_rating}} ratings</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+ 

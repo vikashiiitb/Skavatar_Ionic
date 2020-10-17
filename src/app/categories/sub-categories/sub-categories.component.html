@@ -1,0 +1,25 @@
+<ion-toolbar color="primary">
+  <ion-title color="light">Sub Category of {{CategoryName}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="close" slot="icon-only" (click)="dismiss()" class="white" margin></ion-icon>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+ 
+  <ion-item button (click)="navigateToForm('cars')" detail>
+    <ion-label>
+      Cars
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="navigateToForm('commercial')" detail>
+    <ion-label>
+      Commercial & Other Vehicles
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="navigateToForm('spares')" detail>
+    <ion-label>
+      Spare Parts
+    </ion-label>
+  </ion-item>
+</ion-content>

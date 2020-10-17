@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">Chat</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-segment (ionChange)="seg($event)" mode="md" scrollable id="dag" [value]="segment">
+          <ion-segment-button *ngFor="let item of data; let i = index;" no-margin no-padding (click)="update(i)"
+            [value]="item.title">
+            <ion-text class="text">{{item.title}}</ion-text>
+          </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  <!-- <ion-content color="light">
+    <ion-slides pager="false" [options]="slideOpts" (ionSlideDidChange)="change()" #Slides>
+      <ion-slide >
+        Slide 1
+      </ion-slide>
+      <ion-slide>
+        Slide 2
+      </ion-slide>
+      <ion-slide>
+        Slide 3
+      </ion-slide>
+    </ion-slides>
+  </ion-content> -->
+  <ion-tabs class="ion-margin-top">
+    <ion-tab-bar  slot="top">
+        <ion-tab-button (click)="navigateTo('all')">
+        <ion-icon name="all"></ion-icon>
+        <ion-label>All</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="navigateTo('buying')">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Buying</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="navigateTo('selling')">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Selling</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  

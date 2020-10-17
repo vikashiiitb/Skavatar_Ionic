@@ -1,0 +1,85 @@
+<ion-toolbar color="primary">
+  <ion-title color="light">Sell</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="close" slot="icon-only" (click)="dismiss()" class="white" margin></ion-icon>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid  class="ion-text-center">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4" class="top-left" (click)="openCategories('Cars')">
+        <div>
+          <ion-icon name="car"></ion-icon>
+          <div class="ion-padding">
+            Cars
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4" class="top-center">
+        <div>
+          <ion-icon name="bicycle"></ion-icon>
+           <div class="ion-padding">
+            Bikes
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4" class="top-right">
+        <div>
+          <fa-icon icon="mobile-alt"></fa-icon>
+           <div class="ion-padding">
+            Mobiles
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4" class="center-right">
+        <fa-icon icon="building"></fa-icon>
+           <div class="ion-padding">
+            Properties
+          </div>
+      </ion-col>
+      <ion-col size="4" class="center-center">
+        <div>
+          <fa-icon icon="laptop"></fa-icon>
+           <div class="ion-padding">
+            Electronics
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4" class="center-right">
+        <div>
+          <fa-icon icon="couch"></fa-icon>
+           <div class="ion-padding">
+            Furniture
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4" class="bottom-left">
+        <fa-icon icon="shopping-bag"></fa-icon>
+          <div class="ion-padding">
+            Jobs
+          </div>
+      </ion-col>
+      <ion-col size="4" class="bottom-center">
+        <div>
+          <fa-icon icon="tshirt"></fa-icon>
+           <div class="ion-padding">
+            Fashion
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4" class="bottom-right">
+        <div>
+          <fa-icon icon="running"></fa-icon>
+           <div class="ion-padding">
+            Books, Sports and Hobbies 
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

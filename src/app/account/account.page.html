@@ -1,0 +1,43 @@
+  <!-- /**
+
+ */  -->
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dashboard" text="" icon="close"></ion-back-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-col>
+        <ion-title class="ion-text-center">My Account</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list>
+  <ion-item>
+    <ion-avatar>
+      <img class="image" src="../assets/images/avatar_robo.jpg">
+    </ion-avatar>
+    <ion-label>
+      <ion-text><span float-left no-margin><strong>Log in</strong></span></ion-text><br>
+      <h2>Log in to your account</h2>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<ion-list>
+  <ion-item button  detail (click)="goToSupport()">
+    <ion-label>
+      <ion-text><span float-left no-margin><strong>Help and Support</strong></span></ion-text><br>
+      <h2>Term and conditions, Privacy policy, Help center</h2>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<ion-row>
+  <ion-col>
+    <ion-button expand="block" (click)="signin()" color="mytheme"><ion-text class="white">Loginin or register</ion-text></ion-button>
+  </ion-col>
+</ion-row>
+<ion-content>
+  
+</ion-content>

@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+      <ion-title>Bangalore</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      <ion-searchbar placeholder="Find sports items and more"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <div>
+          Browse Categories
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+          See all
+        </div>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid  class="ion-text-center ion-padding">
+    <ion-row >
+      <ion-col size="4">
+          <ion-fab-button color="cars" class="ion-margin-auto">
+            <ion-icon name="car"></ion-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Cars
+          </div>
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button  color="secondary" class="ion-margin-auto">
+            <ion-icon name="bicycle"></ion-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Bikes
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button color="tertiary" class="ion-margin-auto">
+            <fa-icon icon="mobile-alt"></fa-icon>
+          </ion-fab-button> 
+          <div class="ion-padding">
+            Mobiles
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col size="4">
+          <ion-fab-button color="yellow" class="ion-margin-auto">
+            <fa-icon icon="building"></fa-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Properties
+          </div>
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button  color="electronics" class="ion-margin-auto">
+            <fa-icon icon="laptop"></fa-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Electronics
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button color="furnitures" class="ion-margin-auto">
+            <fa-icon icon="couch"></fa-icon>
+          </ion-fab-button> 
+          <div class="ion-padding">
+            Furniture
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col size="4">
+          <ion-fab-button   color="jobs"  class="ion-margin-auto">
+            <fa-icon icon="shopping-bag"></fa-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Jobs
+          </div>
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button color="fashions" class="ion-margin-auto">
+            <fa-icon icon="tshirt"></fa-icon>
+          </ion-fab-button>
+          <div class="ion-padding">
+            Fashion
+          </div>
+        </div>  
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-fab-button color="books" class="ion-margin-auto">
+            <fa-icon icon="running"></fa-icon>
+          </ion-fab-button> 
+          <div class="ion-padding">
+            Books, Sports and Hobbies 
+          </div>
+        </div>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="ion-padding">
+    Sponsored product
+    <ion-row>
+      <ion-col>
+        <ion-slides [options]="slideOpts" (ionSlideDidChange)="change()" (click)="preventDefault($event)" spaceBetween="-18" #Slides>
+          <ion-slide *ngFor="let data of sponsored;">
+            <app-productlist [data]="data"></app-productlist>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="ion-padding">
+    Fresh recommendations
+    <ion-row>
+      <ion-col size="6"  *ngFor="let data of product_data_5;">
+        <app-productlist [data]="data"></app-productlist>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="ion-padding">
+    Based on search
+    <ion-row>
+      <ion-col size="6"  *ngFor="let data of product_data_2;">
+        <app-productlist [data]="data"></app-productlist>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
