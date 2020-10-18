@@ -172,3 +172,14 @@
     --ion-color-tint: var(--ion-color-mytheme-tint);
   }
   
+  .main-search {
+    .searchbar-input.sc-ion-searchbar-md{
+      background-color: white;
+      border-radius: 25px;
+      height: 35px;;
+    }
+
+    .searchbar-search-icon.sc-ion-searchbar-md{
+      top:8px;
+    }
+  }
